@@ -1,4 +1,5 @@
 # Reproducible Research: Peer Assessment 1
+Brian Gulbis  
 
 
 ## Loading and preprocessing the data
