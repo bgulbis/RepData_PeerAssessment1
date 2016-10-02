@@ -10,11 +10,15 @@ library(dplyr)
 ```
 ## 
 ## Attaching package: 'dplyr'
+```
+
+```
+## The following objects are masked from 'package:stats':
 ## 
-## The following object is masked from 'package:stats':
-## 
-##     filter
-## 
+##     filter, lag
+```
+
+```
 ## The following objects are masked from 'package:base':
 ## 
 ##     intersect, setdiff, setequal, union
@@ -22,6 +26,20 @@ library(dplyr)
 
 ```r
 library(lubridate)
+```
+
+```
+## 
+## Attaching package: 'lubridate'
+```
+
+```
+## The following object is masked from 'package:base':
+## 
+##     date
+```
+
+```r
 library(ggplot2)
 options(scipen=999)
 
@@ -50,7 +68,11 @@ graph <- ggplot(totals, aes(x=total.steps)) +
 print(graph) 
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-2-1.png) 
+```
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+```
+
+![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 ```r
 step.mean <- mean(totals$total.steps)
@@ -78,7 +100,7 @@ graph <- ggplot(activity, aes(x=interval, y=mean.steps)) +
 print(graph) 
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 ```r
 max.steps <- arrange(activity, desc(mean.steps)) %>%
@@ -114,7 +136,11 @@ graph <- ggplot(totals.filled, aes(x=total.steps)) +
 print(graph) 
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+```
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+```
+
+![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 ```r
 filled.mean <- mean(totals.filled$total.steps)
@@ -151,5 +177,5 @@ graph <- ggplot(activity.filled, aes(x=interval, y=mean.steps)) +
 print(graph) 
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
